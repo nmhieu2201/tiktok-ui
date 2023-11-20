@@ -1,0 +1,80 @@
+.wrapper {
+    font-size: 1.6rem;
+    font-family: TikTokFont, sans-serif;
+    font-weight: 600;
+    padding: 9px 16px;
+    min-width: 100px;
+    border-radius: 4px;
+    background-color: var(--white-color);
+    border: 1px solid transparent;
+    user-select: none;
+    cursor: pointer;
+
+    + .wrapper {
+        margin-left: 8px;
+    }
+
+    .disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}
+
+.primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+
+    &:hover {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), rgb(254, 44, 85);
+    }
+}
+
+.outline {
+    color: var(--primary-color);
+    border-color: currentColor;
+
+    &:hover {
+        background-color: #fe2c5514;
+    }
+}
+
+.icon + .title,
+.title + .icon {
+    margin-left: 8px;
+}
+
+.icon {
+    display: inline-block;
+    width: 24px;
+    text-align: center;
+}
+
+//size 
+.small {
+    min-width: 88px;
+    padding: 4px 16px;
+}
+
+.large {
+    min-width: 140px;
+    padding: 14px 16px;
+}
+
+.text {
+    border-color: rgba(22, 24, 35, 0.12);
+    color: #161823;
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+
+.rounded {
+    border-radius: 999px;
+    border-color: rgba(22, 24, 35, 0.12);
+    color: #161823;
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}

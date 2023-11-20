@@ -7,7 +7,7 @@
 
     --search-border-radius: 92px;
     --search-height: 46px;
-    --search-top-spacer: 9px; 
+    --search-top-spacer: 9px;
     --search-button-width: 52px;
 
     .inner {
@@ -18,66 +18,78 @@
         justify-content: space-between;
 
         .logo {
-
-        }
-
-        .search {
-            width: 361px;
-            height: var(--search-height);
-            background: rgba(22, 24, 35, 0.06);
-            border-radius: var(--search-border-radius);
-            padding-left:16px;
             display: flex;
-            justify-content: space-between;
-            position: relative;
-            border: 1px solid rgba(22, 24, 35, 0.2);
-
-            
-            &::after {
-                content: '';
-                position: absolute;
-                top: var(--search-top-spacer);
-                right: var(--search-button-width);
-                height: calc(var(--search-height) - var(--search-top-spacer)*2);
-                width: 1px;
-                background-color:rgba(22,24,35,0.12);
-            }
-
-            input {
-                color: var(--black-color);
-                flex: 1;
-                font-size: 1.6rem;
-                height: 100%;
-                background-color: transparent;
-                caret-color: var(--primary-color);
-            }
-
-            input:not(:placeholder-shown) ~ .search-button {
-                color: rgba(22,24,35,0.75);
-            }
-
-            .close,.loading {
-                position: absolute;
-                right: calc(var(--search-button-width) + 10px);
-                top: 50%;
-                transform: translateY(-50%);
-                color:  rgba(22,24,35,0.34);
-            }
-
-
-            .search-button {
-                width: var(--search-button-width);
-                height: 100%;
-                border-top-right-radius: var(--search-border-radius);
-                border-bottom-right-radius: var(--search-border-radius);
-                font-size: 2rem;
-                color:  rgba(22,24,35,0.34);
-
-                &:hover {
-                    background-color: rgba(22,24,35,0.03);
-                    cursor: pointer;
-                }
-            }
+            justify-content: center;
+            align-items: center;
         }
+
     }
+}
+
+.action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.action-btn {
+    background-color: transparent;
+    font-size: 2.2rem !important;
+    color: #161823;
+    padding: 4px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+.action-btn.upload {
+    font-size: 1.6rem !important;
+    width: 116px;
+    font-weight: 500;
+    color: #161823;
+    border: 1px solid rgba(22, 24, 35, 0.12);
+    padding: 7px 12px;
+    margin-right: 10px;
+}
+
+.action-btn.upload {
+    .upload-icon {
+        margin-right: 8px;
+    }
+}
+
+.sup {
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    left: 32px;
+    background: rgb(254, 44, 85);
+    min-width: 20px;
+    height: 20px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-radius: 10px;
+    position: absolute;
+    top: -6%;
+}
+
+.user-avatar {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    margin-left: 12px;
+    cursor: pointer;
+}
+
+.more-btn {
+    padding: 4px 8px;
+    font-size: 2rem;
+    margin-left: 28px;
+    background-color: transparent;
+    cursor: pointer;
 }
